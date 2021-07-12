@@ -13,7 +13,7 @@ pipeline {
         kubernetes {
             label 'tracecompass-build'
             yamlFile 'tracecompass/pod-templates/tracecompass-pod.yaml'
-            defaultContainer 'tracecompass'
+            //defaultContainer 'tracecompass'
         }
     }
     options {
