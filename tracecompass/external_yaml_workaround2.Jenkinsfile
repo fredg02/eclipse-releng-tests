@@ -50,7 +50,8 @@ pipeline {
             steps {
                 //container('jnlp') {
                     sshagent (['projects-storage.eclipse.org-bot-ssh']) {
-                        sh '${WORKSPACE_SCRIPTS}/deploy-update-site.sh ${SITE_PATH} ${SITE_DESTINATION}'
+                        //sh '${WORKSPACE_SCRIPTS}/deploy-update-site.sh ${SITE_PATH} ${SITE_DESTINATION}'
+                        sh 'ssh genie.tracecompass@projects-storage.eclipse.org ls -al'
                     }
                 //}
             }
